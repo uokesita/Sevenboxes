@@ -42,5 +42,8 @@ module Sevenboxes
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    # Config sass
+    Sass::Plugin.options[:template_location] = { 'app/stylesheets' => 'public/stylesheets' }
   end
 end
