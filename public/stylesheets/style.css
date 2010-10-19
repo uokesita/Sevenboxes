@@ -1,0 +1,38 @@
+body {
+  color: #484848;
+  font-family: Arial; }
+  body h1 {
+    color: #484848;
+    font-size: 36px;
+    font-family: Arial;
+    text-shadow: 1px 1px 1px #a8a7a7;
+    filter: dropshadow(color=#a8a7a7, offx=1, offy=1);
+    display: inline;
+    float: left; }
+  body h2 {
+    color: #484848;
+      color-font-size: 30px;
+      color-font-family: Arial;
+    text-shadow: 1px 1px 1px #a8a7a7;
+    filter: dropshadow(color=#a8a7a7, offx=1, offy=1); }
+  body a {
+    color: #484848;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #a8a7a7;
+    filter: dropshadow(color=#a8a7a7, offx=1, offy=1); }
+
+#header {
+  clear: both;
+  height: 80px; }
+  #header .logo h1 a {
+    text-decoration: none; }
+  #header .usernav {
+    float: right; }
+    #header .usernav a {
+      color: #484848;
+      font-size: 18px;
+      font-family: Arial;
+      font-weight: bold;
+      text-shadow: 1px 1px 1px #a8a7a7;
+      filter: dropshadow(color=#a8a7a7, offx=1, offy=1);
+      padding: 0 5px; }

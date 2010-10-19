@@ -1,0 +1,61 @@
+// VARIABLES
+
+$text-color  = #484848
+$text-shadow = #a8a7a7
+
+
+// BASIC
+
+body
+  :color $text-color
+  font:
+    :family Arial
+   
+  h1
+    :color $text-color
+    font:
+      :size 36px
+      :family Arial
+    :text-shadow 1px 1px 1px $text-shadow
+    :filter dropshadow(color=$text-shadow, offx=1, offy=1)
+    :display inline
+    :float left
+      
+  h2
+    :color $text-color
+      font:
+        :size 30px
+        :family Arial
+    :text-shadow 1px 1px 1px $text-shadow
+    :filter dropshadow(color=$text-shadow, offx=1, offy=1)
+
+  a
+    :color $text-color
+    :font-weight bold
+    :text-shadow 1px 1px 1px $text-shadow
+    :filter dropshadow(color=$text-shadow, offx=1, offy=1)    
+
+
+// HEADER
+
+
+#header 
+  :clear both
+  :height 80px
+   
+  .logo
+    h1 a
+      :text-decoration none
+    
+  .usernav
+    :float right
+   
+    a
+      :color $text-color
+      font:
+        :size 18px
+        :family Arial
+        :weight bold
+      :text-shadow 1px 1px 1px $text-shadow
+      :filter dropshadow(color=$text-shadow, offx=1, offy=1)
+      :padding 0 5px 
