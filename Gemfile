@@ -25,7 +25,10 @@ gem 'activesupport', '3.0.1'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for certain environments:
-# gem 'rspec', :group => :test
-# group :test do
-#   gem 'webrat'
-# end
+group :test, :development do
+  gem "rspec-rails", ">= 2.0.0"
+  gem 'steak', '>= 1.0.0.rc.1'
+  gem 'capybara'
+  gem 'launchy'
+end
+

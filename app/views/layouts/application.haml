@@ -3,7 +3,6 @@
   %head
     %title Seven Boxes
     = stylesheet_link_tag :all
-    = javascript_include_tag 'application'
     = csrf_meta_tag
   %body.container_24
     #header
@@ -21,8 +20,11 @@
           = link_to "Sign in", new_user_session_path
     #banner
         
-    %p{ :class=>"notice"}= notice
-    %p{ :class=>"alert"}= alert
+    %div{ :class=>"notice"}= notice
+    %div{ :class=>"alert"}= alert
   
-    .content
+    #content
       = yield
+
+    = javascript_include_tag 'jquery'
+    = javascript_include_tag 'application'
