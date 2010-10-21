@@ -18,7 +18,6 @@
           = link_to "Sign up", new_user_registration_path
           or
           = link_to "Sign in", new_user_session_path
-    #banner
         
     %div{ :class=>"notice"}= notice
     %div{ :class=>"alert"}= alert
@@ -27,4 +26,5 @@
       = yield
 
     = javascript_include_tag 'jquery'
+    = javascript_include_tag 'slider'
     = javascript_include_tag 'application'

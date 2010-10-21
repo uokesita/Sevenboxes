@@ -17,5 +17,9 @@ function hide_alerts(){
 }
 
 $(document).ready(function(){
-   hide_alerts();
+  hide_alerts();
+  $("#slider").easySlider({
+    auto: false,
+    continuous: true
+  });
 })
