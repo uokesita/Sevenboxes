@@ -22,9 +22,41 @@
     %div{ :class=>"notice"}= notice
     %div{ :class=>"alert"}= alert
   
-    #content
-      = yield
+    #content.grid_24
+      #main-content.grid_17.alpha
+        = yield
+        
+      #social.grid_7.omega
+        %h2
+        %a{ :href=>"#" }
+          %img{ :src=>"/images/icons.gif" }
+          rss
+        %h2
+          %a{ :href=>"#" }
+            twitter
+            
 
+    
+      #sidebar.grid_7.omega
+        %h2 Latest tweets
+
+        %p @sevenboxes this is one tweet so you can write anything here.
+        %p @sevenboxes this is one tweet so you can write anything here.
+        %p @sevenboxes this is one tweet so you can write anything here.
+        %p @sevenboxes this is one tweet so you can write anything here.
+        %p @sevenboxes this is one tweet so you can write anything here.
+        %p @sevenboxes this is one tweet so you can write anything here.
+        %p @sevenboxes this is one tweet so you can write anything here.
+
+
+      
+    #footer
+      .contact.grdid_7.omega
+        %p
+          = "- contact "
+          %a{ :href=>"http://twitter.com/uokesita", :target=>"_blank" } @uokesita
+      
+      
     = javascript_include_tag 'jquery'
     = javascript_include_tag 'slider'
     = javascript_include_tag 'application'

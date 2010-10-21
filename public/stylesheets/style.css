@@ -66,8 +66,18 @@ body {
 #slider p {
   margin-left: 30px; }
 
-#social a {
-  text-decoration: none; }
+#social {
+  margin: 0 0 5px;
+  height: 200px; }
+  #social a {
+    text-decoration: none; }
 
-#content {
-  clear: both; }
+#main-content {
+  float: left; }
+
+#sidebar {
+  float: right; }
+
+#footer .contact {
+  text-align: right;
+  float: right; }
