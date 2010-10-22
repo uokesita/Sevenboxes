@@ -22,18 +22,22 @@ body {
     filter: dropshadow(color=#a8a7a7, offx=1, offy=1); }
     body a img {
       border: 0 none; }
+  body img {
+    vertical-align: middle; }
   body .notice {
     border: 1px solid yellow;
     padding: 20px;
     margin: 10px 0;
     display: block;
-    background: #ffffdf; }
+    background: #ffffdf;
+    width: 600px; }
   body .alert {
     border: 1px solid red;
     padding: 20px;
     margin: 10px 0;
     display: block;
-    background: #ffdfdf; }
+    background: #ffdfdf;
+    width: 600px; }
   body .clear {
     clear: both; }
 
@@ -71,6 +75,9 @@ body {
   height: 200px; }
   #social a {
     text-decoration: none; }
+
+#content {
+  margin-top: 30px; }
 
 #main-content {
   float: left; }
