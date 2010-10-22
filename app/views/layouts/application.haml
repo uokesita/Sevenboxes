@@ -9,11 +9,21 @@
       .logo
         %h1= link_to "7 Boxes", root_path
       .usernav
+        %p
+          The time now is: 
+          = Time.now
         - if user_signed_in?
           Signed in as
           = current_user.email
           Not you?
           = link_to "Sign out", destroy_user_session_path
+          %br
+          %h2
+            %img{ :src=>"/images/profile.png" }
+            = link_to "Edit my profile", edit_user_registration_path
+          %h2
+            %img{ :src=>"/images/add.png" }
+            = link_to 'I Want To Post a New Event', new_event_path
         - else
           = link_to "Sign up", new_user_registration_path
           or
@@ -28,9 +38,9 @@
         
       #social.grid_7.omega
         %h2
-        %a{ :href=>"#" }
-          %img{ :src=>"/images/icons.gif" }
-          rss
+          %a{ :href=>"#" }
+            %img{ :src=>"/images/icons.gif" }
+            rss
         %h2
           %a{ :href=>"#" }
             twitter
