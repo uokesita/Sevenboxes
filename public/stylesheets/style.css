@@ -41,6 +41,12 @@ body {
   body .clear {
     clear: both; }
 
+input {
+  padding: 8px; }
+
+#paginate {
+  text-align: center; }
+
 #header {
   clear: both;
   height: 80px;
@@ -88,9 +94,11 @@ body {
   padding: 0 30px; }
 #slider p {
   margin-left: 30px; }
+#slider a {
+  text-shadow: none; }
 
 #social {
-  margin: 0 0 5px;
+  margin: 45px 0 5px;
   height: 200px; }
   #social a {
     text-decoration: none; }
@@ -100,6 +108,9 @@ body {
 
 #main-content {
   float: left; }
+
+#main-content-index a {
+  text-shadow: none; }
 
 #sidebar {
   float: right; }

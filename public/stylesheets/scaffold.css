@@ -21,9 +21,15 @@ div.field, div.actions {
 }
 
 .field_with_errors {
-  padding: 2px;
+  /*
+	padding: 2px;
   background-color: red;
   display: table;
+  */
+}
+
+.field_with_errors input {
+	border: 1px solid red;
 }
 
 #error_explanation {

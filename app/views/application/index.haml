@@ -1,3 +1,8 @@
+%p
+  Your local time is:
+  = Time.now.strftime("%B %d, %Y - %I:%M %p")
+.clear
+
 #banner.grid_17.alpha
   #slider
     %ul
@@ -7,9 +12,8 @@
           - @live_now.each do |e|
             %p 
               = "- " + e.title
-              = "~ " + e.description
-          
-          
+              %a{ :href=>"#{e.link}", :target=>"_blank" } go to envent's page
+              = e.slider_date
       
       %li
         .tab
@@ -17,17 +21,22 @@
           - @upcomming_events.each do |e|
             %p 
               = "- " + e.title
-              = "~ " + e.description
+              %a{ :href=>"#{e.link}", :target=>"_blank" } go to envent's page
+              = e.slider_date
                 
 .clear
 
 #main-content-index.grid_17.alpha
   %h2 Last events submited
-  - @latest_submited_events.each do |e|
-    %p 
-      = "- " + e.title
-      = "~ " + e.description
-  
+  %ul
+    - @latest_submited_events.each do |e|
+      %li 
+        %p
+          %b= e.title
+          %br= e.description
+          %br
+          %a{ :href=>"#{e.link}", :target=>"_blank" } go to envent's page
+          %br= e.listing_date
 
   #paginate
     = will_paginate @latest_submited_events
