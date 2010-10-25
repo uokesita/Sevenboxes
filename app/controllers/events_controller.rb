@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.xml
   def index
-    @events = Event.all
+    @events = Event.all( :order=>"updated_at desc", :conditions=>[ "user_id = ?", current_user.id ] )
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,7 +44,9 @@ class EventsController < ApplicationController
   # POST /events.xml
   def create
     @event = Event.new(params[:event])
-
+    user_id = current_user.id
+    
+    @event.user_id = user_id
     respond_to do |format|
       if @event.save
         format.html { redirect_to(@event, :notice => 'Event was successfully created.') }

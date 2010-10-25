@@ -1,8 +1,9 @@
-<h2>This are my lastest events added</h2>
+<h2>This are the lastest events added</h2>
 <div class="clear"></div>
 <table>
   <tr>
     <th>Title</th>
+    <th>Description</th>
     <th>Link</th>
     <th>Date</th>
     <th></th>
@@ -12,6 +13,7 @@
 <% @events.each do |event| %>
   <tr>
     <td><%= event.title %></td>
+    <td><%= event.description %></td>
     <td><%= event.link %></td>
     <td><%= event.date %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>

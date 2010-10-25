@@ -4,32 +4,30 @@
       %li
         .tab
           %h2 Live Now
-          %p - Event Name  ~ Descripion of the event, he name of the host.
-          %p - Event Name  ~ Descripion of the event, he name of the host.
-          %p - Event Name  ~ Descripion of the event, he name of the host.
+          - @live_now.each do |e|
+            %p 
+              = "- " + e.title
+              = "~ " + e.description
+          
           
       
       %li
         .tab
           %h2 Comming up NEXT!
-          %p - Event Name  ~ Descripion of the event, he name of the host.
-          %p - Event Name  ~ Descripion of the event, he name of the host.
-          %p - Event Name  ~ Descripion of the event, he name of the host.
+          - @upcomming_events.each do |e|
+            %p 
+              = "- " + e.title
+              = "~ " + e.description
                 
 .clear
 
 #main-content-index.grid_17.alpha
   %h2 Last events submited
-  %p - Event Name  ~ Descripion of the event, he name of the host.
-  %p - Event Name  ~ Descripion of the event, he name of the host.
-  %p - Event Name  ~ Descripion of the event, he name of the host.
-  %p - Event Name  ~ Descripion of the event, he name of the host.
-  %p - Event Name  ~ Descripion of the event, he name of the host.
-  %p - Event Name  ~ Descripion of the event, he name of the host.
-  %p - Event Name  ~ Descripion of the event, he name of the host.
-  %p - Event Name  ~ Descripion of the event, he name of the host.
-  %p - Event Name  ~ Descripion of the event, he name of the host.
-  %p - Event Name  ~ Descripion of the event, he name of the host.
+  - @latest_submited_events.each do |e|
+    %p 
+      = "- " + e.title
+      = "~ " + e.description
+  
 
   #paginate
-   
+    = will_paginate @latest_submited_events

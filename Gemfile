@@ -10,6 +10,8 @@ gem 'mysql'
 
 gem 'devise'
 
+gem 'will_paginate', '~> 3.0.pre2'
+
 gem 'activesupport', '3.0.1'
 
 # Use unicorn as the web server
@@ -31,4 +33,3 @@ group :test, :development do
   gem 'capybara'
   gem 'launchy'
 end
-
