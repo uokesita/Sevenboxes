@@ -5,7 +5,11 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.xml
   def index
-    @events = Event.all( :order=>"updated_at desc", :conditions=>[ "user_id = ?", current_user.id ] )
+    if current_user.role == 'admin'
+      @events = Event.all( :order=>"updated_at desc" )
+    else
+      @events = Event.all( :order=>"updated_at desc", :conditions=>[ "user_id = ?", current_user.id ] )
+    end
 
     respond_to do |format|
       format.html # index.html.erb
