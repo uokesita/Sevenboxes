@@ -7,24 +7,13 @@ gem 'haml'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql'
-
 gem 'devise'
-
+gem 'warden_oauth'
+gem 'devise-twitter'
 gem 'will_paginate', '~> 3.0.pre2'
-
 gem 'activesupport', '3.0.1'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri', '1.4.1'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
+gem 'hpricot'
+gem 'sanitize'
 
 # Bundle gems for certain environments:
 group :test, :development do

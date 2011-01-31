@@ -1,5 +1,12 @@
 Sevenboxes::Application.routes.draw do |map|
 
+  devise_for :user do
+    match '/user/sign_in/twitter' => Devise::Twitter::Rack::Signin
+    match '/user/connect/twitter' => Devise::Twitter::Rack::Connect
+  end
+
+  match '/user/sign_out/twitter', :to => 'application#destroy_user_session_twitter'
+
   resources :events
 
   devise_for :users

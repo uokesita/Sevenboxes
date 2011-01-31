@@ -11,9 +11,13 @@
       .usernav
         - if user_signed_in?
           Signed in as
-          = current_user.email
+          - if current_user.twitter_handle? 
+            = "#{current_user.twitter_handle}"
+          - else 
+            = "#{current_user.email}"
           Not you?
           = link_to "Sign out", destroy_user_session_path
+          = link_to "Sign out", '/user/sign_out/twitter'
           %br
           %a{ :href=>"#", :id=>"myactions" }My actions
           #actions
@@ -26,10 +30,16 @@
             %h2
               %img{ :src=>"/images/my_events.png" }
               = link_to 'My events', events_path
+            - if !current_user.twitter_handle?
+              %h2
+                = link_to 'Connect your account to twitter', '/user/connect/twitter'
         - else
           = link_to "Sign up", new_user_registration_path
           or
           = link_to "Sign in", new_user_session_path
+          or
+          = link_to( "Login With Twitter", '/user/sign_in/twitter', :method => :post )
+         
         
     %div{ :class=>"notice"}= notice
     %div{ :class=>"alert"}= alert
@@ -63,10 +73,6 @@
 
       
     #footer
-      .contact.grdid_7.omega
-        %p
-          = "- contact "
-          %a{ :href=>"http://twitter.com/uokesita", :target=>"_blank" } @uokesita
     
     = javascript_include_tag 'prototype'
     = javascript_include_tag 'jquery'   

@@ -18,6 +18,11 @@
   <p><%= f.label :time_zone %><br />
   <%= f.time_zone_select :time_zone %></p>
 
+  <% if :twitter_handle %>
+    <p><%= f.label :twitter_handle %><br />
+    <%= f.text_field :twitter_handle %></p>
+  <% end %>
+
   <p><%= f.submit "Update" %></p>
 <% end %>
 

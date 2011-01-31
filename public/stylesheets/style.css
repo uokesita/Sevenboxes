@@ -11,9 +11,17 @@ body {
     float: left; }
   body h2 {
     color: #484848;
-      color-font-size: 30px;
-      color-font-family: Arial;
+    font-size: 30px;
+    font-family: Arial;
     text-shadow: 1px 1px 1px #a8a7a7;
+    filter: dropshadow(color=#a8a7a7, offx=1, offy=1); }
+  body h3 {
+    color: #484848;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: normal;
+    line-height: 1.2;
+    text-shadow: 0px 1px 1px #a8a7a7;
     filter: dropshadow(color=#a8a7a7, offx=1, offy=1); }
   body a {
     color: #484848;
@@ -44,8 +52,10 @@ body {
 input {
   padding: 8px; }
 
-#paginate {
+#main-content-index #paginate {
   text-align: center; }
+  #main-content-index #paginate a {
+    display: inline; }
 
 #header {
   clear: both;
@@ -67,7 +77,7 @@ input {
       background: #484848;
       color: white;
       padding: 8px;
-      margin: 8px 0 0 18px;
+      margin: 8px 0 0 65px;
       display: block;
       text-decoration: none;
       width: 270px; }
@@ -76,7 +86,7 @@ input {
       border: 1px solid #484848;
       padding: 5px;
       display: none;
-      margin: 0 0 0 18px;
+      margin: 0 0 0 65px;
       position: absolute;
       width: 274px;
       z-index: 100; }
@@ -109,8 +119,26 @@ input {
 #main-content {
   float: left; }
 
+#main-content-index ul {
+  padding: 0 20px; }
+  #main-content-index ul li {
+    width: 615px;
+    margin-bottom: 30px; }
 #main-content-index a {
-  text-shadow: none; }
+  text-shadow: none;
+  margin: 5px 0;
+  display: block; }
+
+#events_table tr:hover {
+  background: #bfbfbf; }
+#events_table th {
+  text-align: left;
+  font-size: 20px; }
+#events_table td {
+  border: 1px solid black;
+  padding: 5px 10px; }
+  #events_table td a {
+    margin: 20px; }
 
 #sidebar {
   float: right; }

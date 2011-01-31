@@ -1,0 +1,6 @@
+namespace :manners do
+  desc 'the description of what my rake task will do'
+  task :greet do
+    puts 'Hello from Rake'
+  end
+end
